@@ -1,0 +1,118 @@
+//general 
+.menu-scroll-down {
+
+    &:focus {
+        outline: none; 
+    }
+}
+
+//fp nav
+@media screen and (min-width: 48em) {
+    .site-navigation-fixed.navigation-top { 
+        border-top: 1px; 
+        
+        .wrap {
+            max-width: 1200px;
+            padding-top: 0;
+            padding-bottom: 0; 
+            
+            .main-navigation {
+                display: flex; 
+                justify-content: flex-end;
+                
+                span {
+                    flex: 0 1 27%;
+                    margin: auto 0; 
+                    font-size: 1.5rem;
+
+                    i {
+                        margin-right: 1em;
+
+                        &.fa-instagram {
+
+                            &:hover {
+                                color: mediumvioletred; 
+                            }
+                        }
+
+                        &.fa-facebook {
+
+                            &:hover {
+                                color: blue;
+                            }
+                        }
+
+                        &.fa-twitter {
+
+                            &:hover {
+                                color: aqua; 
+                            }
+                        }
+
+                        &:hover { 
+                            animation: rotate 0.5s linear;
+                        }
+                    }
+                }
+                
+                .menu-top-menu-container {
+                    
+                    li {
+                        padding: 0.3em 0; 
+                        font-family: $font_sans;
+                        font-size: 0.90rem; 
+                        font-weight: 700; 
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 48em) {
+    .wrap {
+        max-width: 1200px;
+        padding-left: 0;
+        padding-right: 0;
+        
+        .entry-content {
+            float: none;
+            width: auto;
+        }
+    }
+}
+
+@media screen and (min-width: 48em) {
+.blog:not(.has-sidebar) #primary article, .archive:not(.page-one-column):not(.has-sidebar) #primary article, .search:not(.has-sidebar) #primary article, .error404:not(.has-sidebar) #primary .page-content, .error404.has-sidebar #primary .page-content, body.page-two-column:not(.archive) #primary .entry-content, body.page-two-column #comments {
+        float: none;
+        width: auto;
+    }
+}
+
+// nav animations
+.navigation-top {
+
+    &.site-navigation-fixed {
+        animation: fadeIn 0.25s linear both;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

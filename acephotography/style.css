@@ -1,0 +1,523 @@
+/*
+*
+* Theme: Ace Photography 
+* Template: twentyseventeen 
+* Author: Cody Okafor 
+* Author URI: cowebdesigns.com
+* Description: Photography website for Ace
+* Version: 1.0.0 
+*
+*/
+@import url("../twentyseventeen/style.css");
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+body {
+	font-family: "Gentium Basic", Georgia, Cambria, Times, serif;
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+.active {
+	background: rgba(52, 138, 191, 0.8);
+}
+
+a:active,
+a:focus {
+	outline: 0;
+	border: none;
+	-moz-outline-style: none;
+	outline-style: none;
+}
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+.menu-scroll-down:focus {
+	outline: none;
+}
+
+@media screen and (min-width: 48em) {
+	.site-navigation-fixed.navigation-top {
+		border-top: 1px;
+	}
+	.site-navigation-fixed.navigation-top .wrap {
+		max-width: 1200px;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.site-navigation-fixed.navigation-top .wrap .main-navigation {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: end;
+		    -ms-flex-pack: end;
+		        justify-content: flex-end;
+	}
+	.site-navigation-fixed.navigation-top .wrap .main-navigation span {
+		-webkit-box-flex: 0;
+		    -ms-flex: 0 1 27%;
+		        flex: 0 1 27%;
+		margin: auto 0;
+		font-size: 1.5rem;
+	}
+	.site-navigation-fixed.navigation-top .wrap .main-navigation span i {
+		margin-right: 1em;
+	}
+	.site-navigation-fixed.navigation-top .wrap .main-navigation span i.fa-instagram:hover {
+		color: mediumvioletred;
+	}
+	.site-navigation-fixed.navigation-top .wrap .main-navigation span i.fa-facebook:hover {
+		color: blue;
+	}
+	.site-navigation-fixed.navigation-top .wrap .main-navigation span i.fa-twitter:hover {
+		color: aqua;
+	}
+	.site-navigation-fixed.navigation-top .wrap .main-navigation span i:hover {
+		-webkit-animation: rotate 0.5s linear;
+		        animation: rotate 0.5s linear;
+	}
+	.site-navigation-fixed.navigation-top .wrap .main-navigation .menu-top-menu-container li {
+		padding: 0.3em 0;
+		font-family: "Karla", "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+		font-size: 0.90rem;
+		font-weight: 700;
+	}
+}
+
+@media screen and (min-width: 48em) {
+	.wrap {
+		max-width: 1200px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.wrap .entry-content {
+		float: none;
+		width: auto;
+	}
+}
+
+@media screen and (min-width: 48em) {
+	.blog:not(.has-sidebar) #primary article, .archive:not(.page-one-column):not(.has-sidebar) #primary article, .search:not(.has-sidebar) #primary article, .error404:not(.has-sidebar) #primary .page-content, .error404.has-sidebar #primary .page-content, body.page-two-column:not(.archive) #primary .entry-content, body.page-two-column #comments {
+		float: none;
+		width: auto;
+	}
+}
+
+.navigation-top.site-navigation-fixed {
+	-webkit-animation: fadeIn 0.25s linear both;
+	        animation: fadeIn 0.25s linear both;
+}
+
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes rotate {
+	from {
+		-webkit-transform: rotate(0deg);
+		        transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+		        transform: rotate(360deg);
+	}
+}
+
+@keyframes rotate {
+	from {
+		-webkit-transform: rotate(0deg);
+		        transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+		        transform: rotate(360deg);
+	}
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+	/* Make sure select elements fit in widgets. */
+}
+
+.widget select {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Globals
+--------------------------------------------------------------*/
+@media screen and (min-width: 48em) {
+	.site-footer {
+		margin-top: 0;
+	}
+	.site-footer .wrap {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+		padding-left: 5em;
+	}
+	.site-footer .wrap .widget-area {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+	}
+	.site-footer .wrap .widget-area .widget-column {
+		width: auto;
+		margin-right: 18em;
+		border-top: 2px solid rgba(0, 0, 0, 0.2);
+	}
+	.site-footer .wrap .widget-area .widget-column .widget {
+		margin-top: 3em;
+	}
+	.site-footer .wrap .widget-area .widget-column .widget .widget-title {
+		font-size: .99rem;
+	}
+	.site-footer .wrap .widget-area .widget-column .widget .widget-title .textwidget,
+	.site-footer .wrap .widget-area .widget-column .widget .widget-title .menu-footer-menu-container {
+		font-size: 0.9rem;
+	}
+	.site-footer .wrap .social-navigation .menu-social-media-container {
+		border-top: 2px solid rgba(0, 0, 0, 0.2);
+		display: inline-block;
+		margin-top: 1.8em;
+	}
+	.site-footer .wrap .social-navigation .menu-social-media-container .social-links-menu {
+		margin-top: 3em;
+	}
+}
+
+/*--------------------------------------------------------------
+## Front Page
+--------------------------------------------------------------*/
+.wp-custom-header {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 25px;
+	height: 0;
+}
+
+.wp-custom-header iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.wp-custom-header .wp-custom-header-video-button {
+	display: none;
+}
+
+.metaslider {
+	opacity: 0.75;
+}
+
+@media screen and (min-width: 48em) {
+	.site-header .menu-scroll-down {
+		top: 6.5em;
+		right: 40.5%;
+	}
+}
+
+@media screen and (min-width: 48em) {
+	.site-branding {
+		padding-bottom: 48vh;
+		margin-bottom: 0 !important;
+	}
+	.site-branding .wrap {
+		text-align: center;
+	}
+	.site-branding .wrap .site-title {
+		font-family: "Karla", "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+		font-size: 2.8rem;
+		word-spacing: 0.15em;
+	}
+	.site-branding .wrap .site-description {
+		font-size: 1.4rem;
+		font-weight: 700;
+		word-spacing: 0.1em;
+	}
+}
+
+.panel-content .wrap {
+	border-left: 0px solid transparent;
+	border-right: 0px solid transparent;
+	box-shadow: -7px 3px 37px -2px #c7c7c7;
+}
+
+@media screen and (min-width: 48em) {
+	.wrap .about-section,
+	.wrap .services-section,
+	.wrap .contact-section {
+		padding-left: 4em;
+		padding-right: 4em;
+	}
+}
+
+.about-section p {
+	font-family: "Karla", "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+}
+
+.about-section button {
+	display: block;
+	margin-left: auto;
+	margin-right: 3em;
+}
+
+.portfolio-section .portfolio-header {
+	text-align: center;
+	margin: 3em auto;
+}
+
+.portfolio-section .portfolio-galla ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	list-style: none;
+	margin: 0;
+}
+
+.portfolio-section .portfolio-galla ul li {
+	overflow: hidden;
+}
+
+.portfolio-section .portfolio-galla ul li.image-border {
+	height: auto;
+}
+
+.portfolio-section .portfolio-galla ul li.image-border img {
+	border: 1px solid #eee;
+}
+
+.portfolio-section .portfolio-galla ul li img {
+	vertical-align: top;
+	transition: 0.25s ease-out;
+}
+
+.portfolio-section .portfolio-galla ul li img:hover {
+	-webkit-transform: scale(1.1);
+	        transform: scale(1.1);
+}
+
+.portfolio-section button {
+	display: block;
+	margin: 4.5em auto 0;
+}
+
+.services-section {
+	background: url("http://ace.dev/wp-content/uploads/2017/06/services_bg") no-repeat center center;
+	background-attachment: fixed;
+	color: white;
+	padding: 7em 0;
+}
+
+.services-section .services-content {
+	position: relative;
+	left: 20%;
+}
+
+.services-section .services-content ul {
+	list-style: none;
+	display: inline-block;
+	font-family: "Karla", "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+}
+
+.services-section .services-content ul li {
+	text-indent: 0.5em;
+	margin-top: 0.5em;
+}
+
+.services-section .services-content ul li i {
+	margin-right: 0.45em;
+}
+
+.contact-section {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+
+.contact-section h1 {
+	width: 25%;
+}
+
+.contact-section .contact-text {
+	width: 65%;
+	height: auto;
+	text-align: center;
+}
+
+.contact-section .contact-text p {
+	font-family: "Karla", "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+}
+
+.contact-section .contact-text p strong {
+	font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+	.panel-content .wrap {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.panel-content .wrap .about-section {
+		padding: 0 1em;
+	}
+	.panel-content .wrap .contact-section {
+		padding: 0 1em;
+		display: block;
+	}
+	.panel-content .wrap .contact-section h1 {
+		width: auto;
+		text-align: center;
+	}
+	.panel-content .wrap .contact-section .contact-text {
+		margin-top: 1em;
+		width: auto;
+	}
+}
+
+@media (max-width: 900px) {
+	.portfolio-section .portfolio-galla ul {
+		display: block;
+	}
+	.portfolio-section .portfolio-galla ul img {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Plugins
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+	/* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.icon {
+	display: inline-block;
+	height: 3em;
+	width: 3em;
+	fill: currentColor;
+	stroke: currentColor;
+	vertical-align: middle;
+	position: relative;
+	margin: auto 0;
+}
+
+.icon#icon-flickr {
+	margin-right: 10em;
+}
+
+.site-header .menu-scroll-down .icon {
+	margin-left: 12px;
+}
+
+.svg-fallback {
+	display: none;
+}
+
+.no-svg .svg-fallback {
+	display: inline-block;
+}
+
+.no-svg .svg-fallback.flickr:before {
+	content: "Flickr";
+}
+
+.no-svg .svg-fallback.instagram:before {
+	content: "Instagram";
+}
+
+.no-svg .social-menu a {
+	height: auto;
+	width: auto;
+}
+
+/*# sourceMappingURL=../acephotography/sass/maps/style.css.map */

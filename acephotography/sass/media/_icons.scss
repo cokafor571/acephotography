@@ -1,0 +1,40 @@
+.icon {
+    display: inline-block;
+    height: 3em;
+    width: 3em;
+    fill: currentColor; 
+    stroke: currentColor;
+    vertical-align: middle; 
+    position: relative; 
+    margin: auto 0; 
+    
+    &#icon-flickr {
+        margin-right: 10em; 
+    }
+}
+
+.site-header .menu-scroll-down .icon {
+    margin-left: 12px; 
+}
+
+.svg-fallback {
+    display: none;
+    
+}
+
+.no-svg .svg-fallback {
+    display: inline-block; 
+    
+    &.flickr:before {
+        content: "Flickr"; 
+    }
+    
+    &.instagram:before {
+        content: "Instagram"; 
+    }
+}
+
+.no-svg .social-menu a {
+    height: auto;
+    width: auto;
+}

@@ -1,0 +1,48 @@
+//footer
+@media screen and (min-width: 48em) {
+    .site-footer {
+        margin-top: 0;
+        
+        .wrap {
+            display: flex;
+            justify-content: space-between; 
+            padding-left: 5em; 
+            
+            .widget-area {
+                display: flex; 
+                
+                .widget-column {
+                    width: auto; 
+                    margin-right: 18em; 
+                    border-top: 2px solid rgba(0,0,0,0.2);
+                    
+                    .widget {
+                        margin-top: 3em; 
+
+                        .widget-title {
+                            font-size: .99rem; 
+
+                            .textwidget,
+                            .menu-footer-menu-container {
+                                font-size: 0.9rem; 
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .social-navigation {
+                
+                .menu-social-media-container {
+                    border-top: 2px solid rgba(0,0,0,0.2);
+                    display: inline-block;
+                    margin-top: 1.8em; 
+                        
+                        .social-links-menu {
+                            margin-top: 3em;
+                        }    
+                }
+            }
+        }
+    }
+}
