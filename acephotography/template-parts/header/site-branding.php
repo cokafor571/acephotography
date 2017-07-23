@@ -28,7 +28,13 @@
 		</div><!-- .site-branding-text -->
 
 		<?php if ( ( twentyseventeen_is_frontpage() || ( is_home() && is_front_page() ) ) && has_custom_header() ) : ?>
-        <a href="#content" class="menu-scroll-down"><button>Explore More <?php echo twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ); ?> </button><span class="screen-reader-text"><?php _e( 'Scroll down to content', 'twentyseventeen' ); ?></span></a>
+        <a href="#content" class="menu-scroll-down">
+			<svg class="arrows">
+				<path class="a1" d="M0 0 L20 22 L40 0"></path>
+				<path class="a2" d="M0 20 L20 44 L40 20"></path>
+				<path class="a3" d="M0 40 L20 66 L40 40"></path>
+			</svg><span class="screen-reader-text"><?php _e( 'Scroll down to content', 'twentyseventeen' ); ?></span>
+		</a>
 	<?php endif; ?>
 
 	</div><!-- .wrap -->

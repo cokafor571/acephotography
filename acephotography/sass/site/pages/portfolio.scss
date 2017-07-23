@@ -1,0 +1,23 @@
+//portfolio page
+.page-id-100 {
+
+    // header img
+    .site-header {
+        background: url( 'http://ace.dev/wp-content/uploads/2017/05/sample4' ) no-repeat center center;
+        background-size: cover;
+    }
+    
+    // fix nav
+    .navigation-top {
+        position: relative;
+
+        &.site-navigation-fixed.navigation-top {
+            position: fixed;
+        }
+    }
+
+    // blank entry title
+    .entry-title {
+        display: none;
+    }
+}

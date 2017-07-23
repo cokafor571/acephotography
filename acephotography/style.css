@@ -68,24 +68,30 @@ a:focus {
 	outline: none;
 }
 
-@media screen and (min-width: 48em) {
-	.site-navigation-fixed.navigation-top {
-		border-top: 1px;
-	}
-	.site-navigation-fixed.navigation-top .wrap {
-		max-width: 1200px;
-		padding-top: 0;
-		padding-bottom: 0;
-	}
-	.site-navigation-fixed.navigation-top .wrap .main-navigation {
+.site-navigation-fixed.navigation-top {
+	border-top: 1px;
+}
+
+.site-navigation-fixed.navigation-top .wrap {
+	max-width: 1200px;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.site-navigation-fixed.navigation-top .wrap .main-navigation {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+}
+
+@media (min-width: 768px) {
+	.site-navigation-fixed.navigation-top .wrap .main-navigation span {
 		display: -webkit-box;
 		display: -ms-flexbox;
 		display: flex;
-		-webkit-box-pack: end;
-		    -ms-flex-pack: end;
-		        justify-content: flex-end;
-	}
-	.site-navigation-fixed.navigation-top .wrap .main-navigation span {
 		-webkit-box-flex: 0;
 		    -ms-flex: 0 1 27%;
 		        flex: 0 1 27%;
@@ -98,22 +104,21 @@ a:focus {
 	.site-navigation-fixed.navigation-top .wrap .main-navigation span i.fa-instagram:hover {
 		color: mediumvioletred;
 	}
-	.site-navigation-fixed.navigation-top .wrap .main-navigation span i.fa-facebook:hover {
-		color: blue;
-	}
-	.site-navigation-fixed.navigation-top .wrap .main-navigation span i.fa-twitter:hover {
-		color: aqua;
-	}
 	.site-navigation-fixed.navigation-top .wrap .main-navigation span i:hover {
 		-webkit-animation: rotate 0.5s linear;
 		        animation: rotate 0.5s linear;
 	}
-	.site-navigation-fixed.navigation-top .wrap .main-navigation .menu-top-menu-container li {
-		padding: 0.3em 0;
-		font-family: "Karla", "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
-		font-size: 0.90rem;
-		font-weight: 700;
-	}
+}
+
+.site-navigation-fixed.navigation-top .wrap .main-navigation .menu-top-menu-container li {
+	padding: 0.3em 0;
+	font-family: "Karla", "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+	font-size: 0.90rem;
+	font-weight: 700;
+}
+
+.wrap .main-navigation span {
+	display: none;
 }
 
 @media screen and (min-width: 48em) {
@@ -207,6 +212,16 @@ a:focus {
 /*--------------------------------------------------------------
 ## Globals
 --------------------------------------------------------------*/
+body {
+	padding-bottom: 675.1px;
+}
+
+@media (min-width: 768px) {
+	body {
+		padding-bottom: 397px;
+	}
+}
+
 @media screen and (min-width: 48em) {
 	.site-footer {
 		margin-top: 0;
@@ -227,8 +242,14 @@ a:focus {
 	}
 	.site-footer .wrap .widget-area .widget-column {
 		width: auto;
-		margin-right: 18em;
+		-webkit-box-flex: 1;
+		    -ms-flex: 1;
+		        flex: 1;
+		margin-right: 5em;
 		border-top: 2px solid rgba(0, 0, 0, 0.2);
+	}
+	.site-footer .wrap .widget-area .widget-column.footer-widget-3 .widget {
+		text-align: center;
 	}
 	.site-footer .wrap .widget-area .widget-column .widget {
 		margin-top: 3em;
@@ -250,29 +271,71 @@ a:focus {
 	}
 }
 
+.site-footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+	max-height: 675px;
+}
+
+@media (min-width: 768px) {
+	.site-footer {
+		max-height: 397px;
+	}
+}
+
 /*--------------------------------------------------------------
 ## Front Page
 --------------------------------------------------------------*/
-.wp-custom-header {
-	position: relative;
-	padding-bottom: 56.25%;
-	padding-top: 25px;
-	height: 0;
+.has-header-video.twentyseventeen-front-page .custom-header {
+	overflow: hidden;
+	display: block;
+	height: 50vh;
 }
 
-.wp-custom-header iframe {
+@media (min-width: 769px) {
+	.has-header-video.twentyseventeen-front-page .custom-header {
+		display: table;
+		height: 100vh;
+	}
+}
+
+.has-header-video.twentyseventeen-front-page .custom-header .wp-custom-header {
+	position: relative;
+	height: 50vh;
+}
+
+@media (min-width: 769px) {
+	.has-header-video.twentyseventeen-front-page .custom-header .wp-custom-header {
+		height: 100vh;
+	}
+}
+
+.has-header-video.twentyseventeen-front-page .custom-header .wp-custom-header iframe {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
+	height: 100%;
+	padding-right: 0.85em;
+	-webkit-transform: scale(1.255);
+	        transform: scale(1.255);
 }
 
-.wp-custom-header .wp-custom-header-video-button {
+.has-header-video.twentyseventeen-front-page .custom-header .wp-custom-header .wp-custom-header-video-button {
 	display: none;
 }
 
-.metaslider {
-	opacity: 0.75;
+.twentyseventeen-front-page.has-header-image .custom-header-media:before, .twentyseventeen-front-page.has-header-video .custom-header-media:before, .home.blog.has-header-image .custom-header-media:before, .home.blog.has-header-video .custom-header-media:before {
+	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	.twentyseventeen-front-page.has-header-image .custom-header-media:before, .twentyseventeen-front-page.has-header-video .custom-header-media:before, .home.blog.has-header-image .custom-header-media:before, .home.blog.has-header-video .custom-header-media:before {
+		height: 100%;
+	}
 }
 
 @media screen and (min-width: 48em) {
@@ -291,14 +354,71 @@ a:focus {
 		text-align: center;
 	}
 	.site-branding .wrap .site-title {
-		font-family: "Karla", "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
-		font-size: 2.8rem;
-		word-spacing: 0.15em;
+		font-family: "Gentium Basic", Georgia, Cambria, Times, serif;
+		font-size: 3.5rem;
+		letter-spacing: 0.5em;
+		word-spacing: 0.5em;
 	}
-	.site-branding .wrap .site-description {
-		font-size: 1.4rem;
-		font-weight: 700;
-		word-spacing: 0.1em;
+}
+
+.arrows {
+	width: 40px;
+	height: 66px;
+	position: absolute;
+	left: -350%;
+	bottom: -100px;
+}
+
+.arrows path {
+	stroke: white;
+	fill: transparent;
+	stroke-width: 2px;
+	-webkit-animation: arrow 2s infinite;
+	        animation: arrow 2s infinite;
+}
+
+.arrows path.a1 {
+	-webkit-animation-delay: -1s;
+	        animation-delay: -1s;
+}
+
+.arrows path.a2 {
+	-webkit-animation-delay: -0.5s;
+	        animation-delay: -0.5s;
+}
+
+.arrows path.a3 {
+	-webkit-animation-delay: 0s;
+	        animation-delay: 0s;
+}
+
+@-webkit-keyframes arrow {
+	0% {
+		opacity: 0;
+	}
+	40% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes arrow {
+	0% {
+		opacity: 0;
+	}
+	40% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
 	}
 }
 
@@ -306,6 +426,7 @@ a:focus {
 	border-left: 0px solid transparent;
 	border-right: 0px solid transparent;
 	box-shadow: -7px 3px 37px -2px #c7c7c7;
+	padding: 4.5em 0 0;
 }
 
 @media screen and (min-width: 48em) {
@@ -317,14 +438,65 @@ a:focus {
 	}
 }
 
-.about-section p {
-	font-family: "Karla", "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+.about-section {
+	text-align: center;
 }
 
-.about-section button {
+.about-section .contact-ace {
 	display: block;
-	margin-left: auto;
-	margin-right: 3em;
+}
+
+@media (min-width: 768px) {
+	.about-section .contact-ace {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+	}
+}
+
+.about-section .contact-ace .phone {
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+}
+
+.about-section .contact-ace .phone i {
+	margin-top: 1em;
+}
+
+.about-section .contact-ace .phone i + p + p {
+	font-size: 2rem;
+	margin: 1em 0 .5em;
+}
+
+.about-section .contact-ace .social-contact {
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+}
+
+.about-section .contact-ace .social-contact > i {
+	margin-top: 1em;
+}
+
+.about-section .contact-ace .social-contact > i + p + p {
+	font-size: 2rem;
+	margin: 1em 0 .5em;
+}
+
+.about-section .contact-ace .email {
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+}
+
+.about-section .contact-ace .email i {
+	margin-top: 1em;
+}
+
+.about-section .contact-ace .email i + p + p {
+	font-size: 2rem;
+	margin: 1em 0 .5em;
 }
 
 .portfolio-section .portfolio-header {
@@ -368,7 +540,7 @@ a:focus {
 }
 
 .services-section {
-	background: url("http://174.138.68.228/wp-content/uploads/2017/06/services_bg") no-repeat center center;
+	background: url("http://ace.dev/wp-content/uploads/2017/06/services_bg") no-repeat center bottom;
 	background-attachment: fixed;
 	color: white;
 	padding: 7em 0;
@@ -394,31 +566,54 @@ a:focus {
 	margin-right: 0.45em;
 }
 
-.contact-section {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
+.prices-section {
+	background: url("http://ace.dev/wp-content/uploads/2017/07/ace_prices") no-repeat center center;
+	background-size: cover;
+	color: white;
+	padding: 4em 0;
+	position: relative;
 }
 
-.contact-section h1 {
-	width: 25%;
+.prices-section:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.65);
+	display: block;
+	z-index: 1;
 }
 
-.contact-section .contact-text {
-	width: 65%;
-	height: auto;
+.prices-section .prices-content {
+	position: relative;
+	z-index: 1;
 	text-align: center;
 }
 
-.contact-section .contact-text p {
-	font-family: "Karla", "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+.prices-section .prices-content .prices-category {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
 }
 
-.contact-section .contact-text p strong {
-	font-size: 1.1rem;
+.prices-section .prices-content .prices-category .photo-prices,
+.prices-section .prices-content .prices-category .video-prices {
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+}
+
+.prices-section .prices-content .prices-category .photo-prices h2,
+.prices-section .prices-content .prices-category .video-prices h2 {
+	color: #348abf;
+	font-weight: bold;
+}
+
+.prices-section .prices-content .prices-category .photo-prices ul,
+.prices-section .prices-content .prices-category .video-prices ul {
+	list-style: none;
 }
 
 @media (max-width: 768px) {
@@ -451,6 +646,26 @@ a:focus {
 		display: block;
 		margin: 0 auto;
 	}
+}
+
+/*--------------------------------------------------------------
+## Portfolio Page
+--------------------------------------------------------------*/
+.page-id-100 .site-header {
+	background: url("http://ace.dev/wp-content/uploads/2017/05/sample4") no-repeat center center;
+	background-size: cover;
+}
+
+.page-id-100 .navigation-top {
+	position: relative;
+}
+
+.page-id-100 .navigation-top.site-navigation-fixed.navigation-top {
+	position: fixed;
+}
+
+.page-id-100 .entry-title {
+	display: none;
 }
 
 /*--------------------------------------------------------------

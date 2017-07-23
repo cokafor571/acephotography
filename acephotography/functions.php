@@ -25,12 +25,26 @@ function navigation_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'navigation_scripts' ); 
 
-
-function navigation() {
-    if ( is_front_page() ) {
-       wp_enqueue_script( 'navigation', get_stylesheet_directory_uri() . '/js/scrollspy_script.js', array('jquery'), '20170525'); 
-    }
+function add_footer() {
+    register_sidebar( array(
+            'name'          => __( 'Footer 3', 'twentyseventeen' ),
+            'id'            => 'sidebar-4',
+            'description'   => __( 'Add widgets here to appear in your footer.', 'twentyseventeen' ),
+            'before_widget' => '<section id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</section>',
+            'before_title'  => '<h2 class="widget-title">',
+            'after_title'   => '</h2>',
+        ) );
 }
 
-add_action( 'wp_enqueue_scripts', 'navigation' ); 
+add_action( 'widgets_init', 'add_footer' );
+
+function add_nav_menu() {
+
+    register_nav_menus( array(
+		'pages'    => __( 'Page Menu', 'twentyseventeen' ),
+	) );
+}
+
+add_action( 'after_setup_theme', 'add_nav_menu' );
  

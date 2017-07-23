@@ -1,3 +1,12 @@
+//body styles for sticky footer
+body {
+    padding-bottom: 675.1px;
+
+    @media (min-width: 768px) {
+        padding-bottom: 397px;
+    }
+}
+
 //footer
 @media screen and (min-width: 48em) {
     .site-footer {
@@ -13,8 +22,13 @@
                 
                 .widget-column {
                     width: auto; 
-                    margin-right: 18em; 
+                    flex: 1;
+                    margin-right: 5em; 
                     border-top: 2px solid rgba(0,0,0,0.2);
+
+                    &.footer-widget-3 .widget {
+                        text-align: center;
+                    }
                     
                     .widget {
                         margin-top: 3em; 
@@ -44,5 +58,19 @@
                 }
             }
         }
+    }
+}
+
+// sticky footer 
+.site-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    max-height: 675px;
+
+    @media (min-width: 768px) {
+        max-height: 397px;
     }
 }
